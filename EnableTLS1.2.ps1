@@ -1,3 +1,8 @@
+<#
+.LINK
+https://docs.microsoft.com/en-us/azure/active-directory/hybrid/reference-connect-tls-enforcement
+#>
+
 New-Item 'HKLM:\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319' -Force | Out-Null
 
 	New-ItemProperty -path 'HKLM:\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319' -name 'SystemDefaultTlsVersions' -value '1' -PropertyType 'DWord' -Force | Out-Null
